@@ -27,6 +27,9 @@ class BigLand extends PluginBase implements Listener{
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         if($this->getServer()->getPluginManager()->getPlugin("SimpleArea") !== null){
             $this->area = true;
+            $this->getLogger()->info("SimpleArea plugin was detected!");
+        }else{
+            $this->getLogger()->info("Could not detect SimpleArea plugin!");
         }
     }
 
